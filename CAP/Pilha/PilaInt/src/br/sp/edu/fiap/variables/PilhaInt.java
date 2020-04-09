@@ -3,41 +3,57 @@ package br.sp.edu.fiap.variables;
 import br.sp.edu.fiap.interfaces.IPilhaInt;
 
 public class PilhaInt implements IPilhaInt {
+	static int N = 10;
+	int[] pilha;
+	int topo;
 
 	@Override
 	public void init() {
-		// TODO Auto-generated method stub
-		
+		this.pilha = new int[N];
+		this.topo = 0;
 	}
 
 	@Override
 	public boolean isFull() {
-		// TODO Auto-generated method stub
-		return false;
+		if (topo == N) {
+			System.out.println("Pilha cheia!");
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		if (topo == 0) {
+			System.out.println("Pilha vazia!");
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@Override
 	public void push(int value) {
-		// TODO Auto-generated method stub
-		
+		if (!isFull()) {
+			pilha[topo] = value;
+			topo++;
+		}
 	}
 
 	@Override
 	public int pop() {
-		// TODO Auto-generated method stub
-		return 0;
+		if (!isEmpty()) {
+			topo--;
+			return pilha[topo];
+		} else {
+			return -1;
+		}
 	}
 
 	@Override
 	public int top() {
-		// TODO Auto-generated method stub
-		return 0;
+		return !isEmpty() ? pilha[topo - 1] : Integer.MIN_VALUE;
 	}
 
 }
