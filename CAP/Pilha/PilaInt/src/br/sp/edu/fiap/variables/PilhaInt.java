@@ -5,18 +5,17 @@ import br.sp.edu.fiap.interfaces.IPilhaInt;
 public class PilhaInt implements IPilhaInt {
 	static int N = 10;
 	int[] pilha;
-	int posicao;
+	int topo;
 
 	@Override
 	public void init() {
-		System.out.println("Pilha Iniciada");
 		this.pilha = new int[N];
-		this.posicao = 0;
+		this.topo = 0;
 	}
 
 	@Override
 	public boolean isFull() {
-		if(posicao == N) {
+		if (topo == N) {
 			System.out.println("Pilha cheia!");
 			return true;
 		} else {
@@ -26,7 +25,7 @@ public class PilhaInt implements IPilhaInt {
 
 	@Override
 	public boolean isEmpty() {
-		if(posicao == 0) {
+		if (topo == 0) {
 			System.out.println("Pilha vazia!");
 			return true;
 		} else {
@@ -36,17 +35,25 @@ public class PilhaInt implements IPilhaInt {
 
 	@Override
 	public void push(int value) {
-		if(!isFull()) pilha[posicao] = value;
+		if (!isFull()) {
+			pilha[topo] = value;
+			topo++;
+		}
 	}
 
 	@Override
 	public int pop() {
-		return !isEmpty() ? pilha[posicao - 1] : -1;
+		if (!isEmpty()) {
+			topo--;
+			return pilha[topo];
+		} else {
+			return -1;
+		}
 	}
 
 	@Override
 	public int top() {
-		return  !isEmpty() ? pilha[posicao] : -1;
+		return !isEmpty() ? pilha[topo - 1] : Integer.MIN_VALUE;
 	}
 
 }
