@@ -9,7 +9,9 @@ Este repositorio esta dividido por materia acessando a materia voce podera visua
 ### Pre-requisitos
 
 Para cada materia voce devera usa uma IDE especifica.
+
 Exemplo:
+
 ```
 CAP voce devera usar uma IDE para java***
 ```
@@ -17,7 +19,7 @@ CAP voce devera usar uma IDE para java***
 
 ## IDE Recomendada
 
-* [Eclipse](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-03/R/) - The web framework used
+* [Eclipse](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-03/R/) - Ide usada em Aula.
 
 ## Autor
 
