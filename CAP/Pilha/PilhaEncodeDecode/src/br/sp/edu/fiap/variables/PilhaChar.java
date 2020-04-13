@@ -1,19 +1,19 @@
 package br.sp.edu.fiap.variables;
 
-import br.sp.edu.fiap.interfaces.IPilhaInt;
+import br.sp.edu.fiap.interfaces.IPilhaChar;
 
-public class PilhaInt implements IPilhaInt {
+public class PilhaChar implements IPilhaChar{
 	int N;
 	int topo;
-	int[] pilha;
-	public PilhaInt(int N) {
+	char[] pilha;
+	public PilhaChar(int N) {
 		this.N = N;
 	}
 
 	@Override
 	public void init() {
 		this.topo = 0;
-		this.pilha = new int[this.N];		
+		this.pilha = new char[this.N];		
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class PilhaInt implements IPilhaInt {
 	}
 
 	@Override
-	public void push(int valor) {
+	public void push(char valor) {
 		if(!isFull()) {
 			this.pilha[this.topo] = valor;
 			this.topo++;
@@ -43,21 +43,22 @@ public class PilhaInt implements IPilhaInt {
 	}
 
 	@Override
-	public int pop() {
+	public char pop() {
 		if(!isEmpty()) {
 			this.topo--;
 			return this.pilha[this.topo];
 		} else {
-			return -1;
+			return Character.MIN_VALUE;
 		}
 	}
 
 	@Override
-	public int top() {
+	public char top() {
 		if(!isEmpty()) {
 			return this.pilha[this.topo - 1];
 		} else {
-			return -1;
+			return Character.MIN_VALUE;
 		}
 	}
+
 }
