@@ -14,7 +14,7 @@ public class SalvaSenha {
 			case 1:
 				if (encode == "\n") {
 					encode = PedirSenha(new Scanner(System.in));
-					encode = new Segredo().encode(encode);
+					encode = new Segredo().embaralhar(encode);
 					System.out.println("Sua senha esta encryptada: " + encode);
 				} else {
 					System.out.println("Voce não digitou uma senha ainda.");
@@ -22,7 +22,7 @@ public class SalvaSenha {
 				break;
 			case 2:
 				if (decode == "\n" && encode != "\n") {
-					decode = new Segredo().decode(encode);
+					decode = new Segredo().desembaralhar(encode);
 					System.out.println("Sua senha descryptada: " + decode);
 					encode = "\n";
 				} else {

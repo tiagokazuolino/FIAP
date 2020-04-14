@@ -7,7 +7,7 @@ import br.sp.edu.fiap.variables.PilhaChar;
 public class Segredo implements ISegredo {
 	static char[] original = new char[] { 'a', 's', 'r', 'e', 'i', 'o', 'u' };
 	static char[] troca = new char[] { '@', '$', '*', '&', '!', '(', '+' };
-	public String encode(String valor) {
+	public String embaralhar(String valor) {
 		String transform = valor.replaceAll("[#]", "\n#\n");
 		transform = transform.replaceAll("[_]", "\n_\n");
 		String[] palavras = transform.split("[\\n]");
@@ -27,7 +27,7 @@ public class Segredo implements ISegredo {
 		}		
 		return new String(frase);
 	}
-	public String decode(String valor) {
+	public String desembaralhar(String valor) {
 		String transform = valor.replaceAll("[#]", "\n#\n");
 		transform = transform.replaceAll("[_]", "\n_\n");
 		String[] palavras = transform.split("[\\n]");
