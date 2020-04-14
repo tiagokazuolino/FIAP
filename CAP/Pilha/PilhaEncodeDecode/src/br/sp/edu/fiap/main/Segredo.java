@@ -1,7 +1,6 @@
 package br.sp.edu.fiap.main;
 
 import br.sp.edu.fiap.interfaces.IPilhaChar;
-import br.sp.edu.fiap.interfaces.ISalvaSenha;
 import br.sp.edu.fiap.interfaces.ISegredo;
 import br.sp.edu.fiap.variables.PilhaChar;
 
