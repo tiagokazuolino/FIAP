@@ -1,4 +1,4 @@
-package br.sp.edu.fiap.main;
+package main;
 
 import java.util.Scanner;
 

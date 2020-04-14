@@ -1,10 +1,8 @@
-package br.sp.edu.fiap.main;
+package main;
 
-import br.sp.edu.fiap.interfaces.IPilhaChar;
-import br.sp.edu.fiap.interfaces.ISegredo;
-import br.sp.edu.fiap.variables.PilhaChar;
+import variaveis.PilhaChar;
 
-public class Segredo implements ISegredo {
+public class Segredo  {
 	static char[] original = new char[] { 'a', 's', 'r', 'e', 'i', 'o', 'u' };
 	static char[] troca = new char[] { '@', '$', '*', '&', '!', '(', '+' };
 	public String embaralhar(String valor) {
@@ -49,7 +47,7 @@ public class Segredo implements ISegredo {
 	}
 	public String inverter(String palavra) {
 		char[] p = palavra.toCharArray();
-		IPilhaChar pilha = new PilhaChar(p.length);
+		PilhaChar pilha = new PilhaChar(p.length);
 		pilha.init();
 		for (int i = 0; i < p.length; i++) {
 			if (!pilha.isFull()) {
