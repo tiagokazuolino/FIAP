@@ -43,9 +43,9 @@ public class SalvaSenha {
 	}
 	public static int Menu(Scanner tc) {
 		System.out.println("Menu:");
-		System.out.println("\tDigite 1 para Encryptar Senha");
-		System.out.println("\tDigite 2 para Decryptar Senha");
-		System.out.println("\tDigite 0 para sair");
+		System.out.println("Digite 1 para Encryptar Senha");
+		System.out.println("Digite 2 para Decryptar Senha");
+		System.out.println("Digite 0 para sair");
 		return tc.nextInt();		
 	}
 	public static String PedirSenha(Scanner tc) {
